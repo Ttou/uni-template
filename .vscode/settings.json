@@ -1,0 +1,12 @@
+{
+  "[vue]": {
+    "editor.defaultFormatter": "johnsoncodehk.volar"
+  },
+  "files.associations": {
+    "manifest.json": "jsonc",
+    "pages.json": "jsonc"
+  },
+  "path-intellisense.mappings": {
+    "@": "${workspaceFolder}/src"
+  }
+}
