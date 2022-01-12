@@ -19,5 +19,3 @@ defineComponent({
   }
 })
 </script>
-
-<style></style>

@@ -10,6 +10,7 @@ module.exports = {
   extends: [
     '@vue/standard',
     '@vue/typescript/recommended',
+    'plugin:vue/vue3-recommended',
     'prettier',
     'plugin:prettier/recommended'
   ],
