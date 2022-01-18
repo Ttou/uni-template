@@ -2,7 +2,7 @@
 import { onHide, onLaunch, onShow } from '@dcloudio/uni-app'
 import { defineComponent } from 'vue'
 
-defineComponent({
+export default defineComponent({
   name: 'App',
   setup() {
     onLaunch(() => {
