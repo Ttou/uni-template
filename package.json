@@ -61,7 +61,7 @@
     "@dcloudio/uni-automator": "vue3",
     "@dcloudio/uni-cli-shared": "vue3",
     "@dcloudio/vite-plugin-uni": "vue3",
-    "@rushstack/eslint-patch": "^1.1.0",
+    "@ttou/define-config": "^1.0.5",
     "@typescript-eslint/eslint-plugin": "^5.9.0",
     "@typescript-eslint/parser": "^5.9.0",
     "@vue/eslint-config-prettier": "^7.0.0",

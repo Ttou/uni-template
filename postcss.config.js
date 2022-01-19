@@ -1,6 +1,8 @@
-const autoprefixer = require('autoprefixer')
-const { uniPostcssPlugin } = require('@dcloudio/uni-cli-shared')
+const { definePostcssConfig } = require('@ttou/define-config')
 
-module.exports = {
-  plugins: [uniPostcssPlugin(), autoprefixer()]
-}
+module.exports = definePostcssConfig({
+  plugins: [
+    require('@dcloudio/uni-cli-shared').uniPostcssPlugin,
+    require('autoprefixer')
+  ]
+})
