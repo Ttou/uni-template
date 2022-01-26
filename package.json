@@ -33,7 +33,7 @@
     "build:quickapp-webview-huawei": "uni build -p quickapp-webview-huawei",
     "build:quickapp-webview-union": "uni build -p quickapp-webview-union",
     "commit": "git add . && git cz",
-    "format": "prettier --write \"src/**/*.{ts,vue}\"",
+    "format": "prettier --write \"src/**/*.{css,scss,ts,vue}\"",
     "lint:script": "eslint \"src/**/*.{ts,vue}\" --fix",
     "lint:style": "stylelint \"src/**/*.{css,scss,vue}\" --fix",
     "prepare": "husky install"
