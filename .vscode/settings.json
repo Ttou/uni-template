@@ -5,7 +5,5 @@
   },
   "path-intellisense.mappings": {
     "@": "${workspaceFolder}/src"
-  },
-  "css.lint.emptyRules": "ignore",
-  "css.lint.unknownProperties": "ignore"
+  }
 }
