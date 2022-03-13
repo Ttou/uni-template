@@ -14,6 +14,7 @@ module.exports = defineEslintConfig({
   ],
   plugins: ['simple-import-sort'],
   rules: {
+    'no-undef': 'off',
     'simple-import-sort/imports': 'error',
     'simple-import-sort/exports': 'error',
     'vue/attribute-hyphenation': 'off',

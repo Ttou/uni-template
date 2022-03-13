@@ -1,7 +1,7 @@
 import ajax from 'uni-ajax'
 
 const instance = ajax.create({
-  baseURL: '/'
+  baseURL: '/api'
 })
 
 instance.interceptors.request.use(
@@ -16,7 +16,7 @@ instance.interceptors.request.use(
 
 instance.interceptors.response.use(
   response => {
-    return response
+    return response.data
   },
   error => {
     // 处理响应错误

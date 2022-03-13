@@ -1,6 +1,6 @@
 <template>
   <view :class="$style.page">
-    <image :class="$style.logo" src="/static/logo.png" />
+    <image :class="$style.logo" src="../../static/logo.png" />
     <view :class="$style.textArea">
       <text :class="$style.title">{{ title }}</text>
       <text :class="$style.count">{{ count }}</text>
