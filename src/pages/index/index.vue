@@ -99,5 +99,6 @@ export default defineComponent({
   height: 300rpx;
   background-color: #fff;
   border-radius: 16rpx;
+  font-size: 28rpx;
 }
 </style>
