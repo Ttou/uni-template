@@ -52,9 +52,9 @@
     "@dcloudio/uni-mp-weixin": "vue3",
     "@dcloudio/uni-quickapp-webview": "vue3",
     "@dcloudio/uni-ui": "1.4.12",
-    "pinia": "2.0.12",
-    "uni-ajax": "2.4.3",
-    "vue": "3.2.31"
+    "pinia": "2.0.13",
+    "uni-ajax": "2.4.4",
+    "vue": "3.2.33"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.0.0",
@@ -86,7 +86,7 @@
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-standard": "^25.0.0",
     "typescript": "^4.5.2",
-    "vite": "^2.8.6",
+    "vite": "^2.9.8",
     "vue-demi": "^0.12.1"
   },
   "config": {
