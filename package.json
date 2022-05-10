@@ -51,8 +51,8 @@
     "@dcloudio/uni-mp-toutiao": "vue3",
     "@dcloudio/uni-mp-weixin": "vue3",
     "@dcloudio/uni-quickapp-webview": "vue3",
-    "@dcloudio/uni-ui": "1.4.12",
-    "pinia": "2.0.13",
+    "@dcloudio/uni-ui": "1.4.15",
+    "pinia": "2.0.14",
     "uni-ajax": "2.4.4",
     "vue": "3.2.33"
   },
