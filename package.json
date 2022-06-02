@@ -53,28 +53,29 @@
     "@dcloudio/uni-quickapp-webview": "vue3",
     "@dcloudio/uni-ui": "1.4.15",
     "pinia": "2.0.14",
+    "thorui-uni": "1.9.0",
     "uni-ajax": "2.4.4",
-    "vue": "3.2.33"
+    "vue": "3.2.36"
   },
   "devDependencies": {
-    "@commitlint/cli": "^16.0.0",
-    "@commitlint/config-conventional": "^16.0.0",
+    "@commitlint/cli": "^17.0.0",
+    "@commitlint/config-conventional": "^17.0.0",
     "@dcloudio/types": "^2.5.15",
     "@dcloudio/uni-automator": "vue3",
     "@dcloudio/uni-cli-shared": "vue3",
     "@dcloudio/vite-plugin-uni": "vue3",
     "@ttou/define-config": "^1.0.7",
-    "@typescript-eslint/eslint-plugin": "^5.19.0",
-    "@typescript-eslint/parser": "^5.19.0",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
     "@vue/eslint-config-typescript": "^10.0.0",
     "autoprefixer": "^10.4.1",
     "commitizen": "^4.2.4",
     "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^8.13.0",
+    "eslint": "^8.0.0",
     "eslint-config-prettier": "^8.0.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
-    "eslint-plugin-vue": "^8.6.0",
+    "eslint-plugin-vue": "^8.0.0",
     "husky": "^7.0.0",
     "lint-staged": "^12.0.2",
     "postcss": "^8.4.12",
@@ -85,9 +86,9 @@
     "stylelint": "^14.2.0",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-standard": "^25.0.0",
-    "typescript": "^4.5.2",
+    "typescript": "^4.7.2",
     "vite": "^2.9.9",
-    "vue-demi": "^0.12.1"
+    "vue-demi": "^0.13.1"
   },
   "config": {
     "commitizen": {

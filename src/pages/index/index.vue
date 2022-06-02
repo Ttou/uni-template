@@ -4,8 +4,8 @@
     <view :class="$style.textArea">
       <text :class="$style.title">{{ title }}</text>
       <text :class="$style.count">{{ count }}</text>
-      <button :class="$style.btn" @click="handleCount">计数</button>
-      <button :class="$style.btn" @click="handleOpen">弹窗</button>
+      <tui-button :class="$style.btn" @click="handleCount">计数</tui-button>
+      <tui-button :class="$style.btn" @click="handleOpen">弹窗</tui-button>
     </view>
     <uni-popup ref="dialogRef">
       <view :class="$style.dialog">
@@ -18,34 +18,21 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, ref } from 'vue'
+import { defineComponent, ref } from 'vue'
 
-import { useMainStore } from '@/store'
+import { useCount, useDialog } from './hooks'
 
 export default defineComponent({
-  name: 'IndexPage',
   setup() {
-    const dialogRef = ref<ComponentRef>(null)
     const title = ref('Hello UniApp')
 
-    const mainStore = useMainStore()
-
-    const count = computed(() => mainStore.count)
-
-    function handleCount() {
-      mainStore.add()
-    }
-
-    function handleOpen() {
-      dialogRef.value?.open()
-    }
+    const { ...countHook } = useCount()
+    const { ...dialogHook } = useDialog()
 
     return {
-      dialogRef,
       title,
-      count,
-      handleCount,
-      handleOpen
+      ...countHook,
+      ...dialogHook
     }
   }
 })
@@ -82,6 +69,7 @@ export default defineComponent({
 }
 
 .btn {
+  width: 250rpx;
 }
 
 .btn + .btn {
