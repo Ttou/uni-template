@@ -32,11 +32,7 @@
     "build:quickapp-webview": "uni build -p quickapp-webview",
     "build:quickapp-webview-huawei": "uni build -p quickapp-webview-huawei",
     "build:quickapp-webview-union": "uni build -p quickapp-webview-union",
-    "commit": "git add . && git cz",
-    "format": "prettier --write \"src/**/*.{css,scss,ts,vue}\"",
-    "lint:script": "eslint \"src/**/*.{ts,vue}\" --fix",
-    "lint:style": "stylelint \"src/**/*.{css,scss,vue}\" --fix",
-    "prepare": "husky install"
+    "commit": "git add . && git cz"
   },
   "dependencies": {
     "@dcloudio/uni-app": "vue3",
@@ -64,7 +60,7 @@
     "@dcloudio/uni-automator": "vue3",
     "@dcloudio/uni-cli-shared": "vue3",
     "@dcloudio/vite-plugin-uni": "vue3",
-    "@ttou/define-config": "^1.0.7",
+    "@ttou/define-config": "^1.0.0",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@typescript-eslint/parser": "^5.0.0",
     "@vue/eslint-config-typescript": "^10.0.0",
@@ -76,13 +72,13 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "eslint-plugin-vue": "^8.0.0",
-    "husky": "^7.0.0",
     "lint-staged": "^12.0.2",
     "postcss": "^8.4.12",
     "postcss-html": "^1.3.0",
     "postcss-scss": "^4.0.3",
     "prettier": "^2.5.1",
     "sass": "^1.47.0",
+    "simple-git-hooks": "^2.8.0",
     "stylelint": "^14.2.0",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-standard": "^25.0.0",
@@ -96,7 +92,17 @@
     }
   },
   "lint-staged": {
-    "*.{ts,vue}": "npm run lint:script",
-    "*.{css,scss,vue}": "npm run lint:style"
+    "*.{ts,vue}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{css,scss,vue}": [
+      "stylelint --fix",
+      "prettier --write"
+    ]
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged",
+    "commit-msg": "npx commitlint --edit $1"
   }
 }
