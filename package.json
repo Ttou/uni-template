@@ -47,9 +47,8 @@
     "@dcloudio/uni-mp-toutiao": "vue3",
     "@dcloudio/uni-mp-weixin": "vue3",
     "@dcloudio/uni-quickapp-webview": "vue3",
-    "@dcloudio/uni-ui": "1.4.16",
+    "@dcloudio/uni-ui": "^1.4.16",
     "pinia": "2.0.14",
-    "thorui-uni": "1.9.0",
     "uni-ajax": "2.4.4",
     "vue": "3.2.37"
   },
@@ -82,8 +81,8 @@
     "stylelint": "^14.0.0",
     "stylelint-config-prettier": "^9.0.0",
     "stylelint-config-standard": "^26.0.0",
-    "typescript": "^4.7.2",
-    "vite": "^2.9.9"
+    "typescript": "^4.0.0",
+    "vite": "^2.0.0"
   },
   "config": {
     "commitizen": {
