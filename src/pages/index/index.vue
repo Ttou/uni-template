@@ -7,13 +7,13 @@
       <button class="btn" @click="handleCount">计数</button>
       <button class="btn" @click="handleOpen">弹窗</button>
     </view>
-    <uni-popup ref="dialogRef">
+    <u-popup :show="show" mode="center" @close="handleClose">
       <view class="dialog">
         <view class="content">
           <text>Hello World</text>
         </view>
       </view>
-    </uni-popup>
+    </u-popup>
   </view>
 </template>
 

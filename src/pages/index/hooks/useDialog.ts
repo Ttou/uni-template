@@ -1,14 +1,19 @@
 import { ref } from 'vue'
 
 export function useDialog() {
-  const dialogRef = ref<ComponentRef>(null)
+  const show = ref(false)
 
   function handleOpen() {
-    dialogRef.value?.open()
+    show.value = true
+  }
+
+  function handleClose() {
+    show.value = false
   }
 
   return {
-    dialogRef,
-    handleOpen
+    show,
+    handleOpen,
+    handleClose
   }
 }
