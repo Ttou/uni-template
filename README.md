@@ -6,7 +6,7 @@ Uni Template 是一个开源的小程序模版。
 
 ## 特性
 
-- **技术栈**：使用 Vue3/UniApp 等前端前沿技术开发
+- **技术栈**：使用 Vue3/UniApp/uViewPlus 等前端前沿技术开发
 - **TypeScript**：应用程序级 JavaScript 的语言
 
 ## 准备
@@ -14,7 +14,7 @@ Uni Template 是一个开源的小程序模版。
 - [Node](http://nodejs.org/) 和 [Git](https://git-scm.com/)
 - [Vue3](https://v3.cn.vuejs.org/guide/introduction.html)
 - [UniApp](https://uniapp.dcloud.io/)
-- [UniUI](https://uniapp.dcloud.io/component/uniui/uni-ui)
+- [uViewPlus](https://uiadmin.net/uview-plus/components/intro.html)
 
 ## 安装使用
 
