@@ -21,6 +21,8 @@
     ],
     "types": [
       "@dcloudio/types",
+      "@ttou/uview-typings/components",
+      "@ttou/uview-typings/refs",
       "vite/client"
     ]
   },

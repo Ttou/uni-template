@@ -63,6 +63,7 @@
     "@dcloudio/uni-cli-shared": "vue3",
     "@dcloudio/vite-plugin-uni": "vue3",
     "@ttou/define-config": "^2.0.0",
+    "@ttou/uview-typings": "^1.0.2",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@typescript-eslint/parser": "^5.0.0",
     "@vue/eslint-config-typescript": "^11.0.0",
