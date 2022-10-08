@@ -31,5 +31,9 @@
     "src/**/*.tsx",
     "src/**/*.vue",
     "types/**/*.d.ts"
-  ]
+  ],
+  "vueCompilerOptions": {
+    "target": 3,
+    "experimentalResolveStyleCssClasses": "scoped"
+  }
 }
