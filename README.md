@@ -46,3 +46,4 @@ npm run build:mp-weixin
 
 - 装上 volar 插件后更好的支持模板开发
 - 不要用 pnpm 安装依赖
+- 使用 HBuilderX 打开项目时，以 src 为根目录

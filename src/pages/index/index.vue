@@ -4,8 +4,8 @@
     <view class="text-wrap">
       <text class="title">{{ title }}</text>
       <text class="count">{{ count }}</text>
-      <button class="btn" @click="handleCount">计数</button>
-      <button class="btn" @click="handleOpen">弹窗</button>
+      <u-button class="btn" type="info" @click="handleCount">计数</u-button>
+      <u-button class="btn" type="info" @click="handleOpen">弹窗</u-button>
     </view>
     <u-popup :show="show" mode="center" @close="handleClose">
       <view class="dialog">
@@ -26,8 +26,8 @@ export default defineComponent({
   setup() {
     const title = ref('Hello UniApp')
 
-    const { ...countHook } = useCount()
-    const { ...dialogHook } = useDialog()
+    const countHook = useCount()
+    const dialogHook = useDialog()
 
     return {
       title,
