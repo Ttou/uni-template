@@ -48,7 +48,6 @@
     "@dcloudio/uni-mp-toutiao": "vue3",
     "@dcloudio/uni-mp-weixin": "vue3",
     "@dcloudio/uni-quickapp-webview": "vue3",
-    "clipboard": "^2.0.0",
     "dayjs": "^1.0.0",
     "pinia": "^2.0.0",
     "uni-ajax": "^2.0.0",

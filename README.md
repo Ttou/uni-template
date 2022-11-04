@@ -45,3 +45,4 @@ npm run build:mp-weixin
 ## 注意事项
 
 - 装上 volar 插件后更好的支持模板开发
+- 不要用 pnpm 安装依赖
