@@ -61,14 +61,14 @@
     "@dcloudio/uni-automator": "vue3",
     "@dcloudio/uni-cli-shared": "vue3",
     "@dcloudio/vite-plugin-uni": "vue3",
-    "@ttou/define-config": "^2.0.0",
+    "@ttou/define-config": "^2.1.1",
     "@ttou/uview-typings": "^1.0.2",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@typescript-eslint/parser": "^5.0.0",
     "@vue/eslint-config-typescript": "^11.0.0",
     "autoprefixer": "^10.4.1",
     "commitizen": "^4.2.4",
-    "cz-conventional-changelog": "^3.3.0",
+    "cz-customizable": "^7.0.0",
     "eslint": "^8.0.0",
     "eslint-config-prettier": "^8.0.0",
     "eslint-plugin-prettier": "^4.0.0",
@@ -81,15 +81,15 @@
     "prettier": "^2.0.0",
     "sass": "^1.47.0",
     "simple-git-hooks": "^2.8.0",
-    "stylelint": "^14.0.0",
+    "stylelint": "^14.15.0",
     "stylelint-config-prettier": "^9.0.0",
-    "stylelint-config-standard": "^26.0.0",
+    "stylelint-config-standard": "^29.0.0",
     "typescript": "^4.0.0",
     "vite": "^3.0.0"
   },
   "config": {
     "commitizen": {
-      "path": "cz-conventional-changelog"
+      "path": "cz-customizable"
     }
   },
   "simple-git-hooks": {
