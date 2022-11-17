@@ -8,7 +8,7 @@ export function useCount() {
   const count = computed(() => mainStore.count)
 
   function handleCount() {
-    mainStore.add()
+    mainStore.increment()
   }
 
   return {

@@ -50,8 +50,8 @@
     "@dcloudio/uni-quickapp-webview": "vue3",
     "dayjs": "^1.0.0",
     "pinia": "^2.0.0",
-    "uni-ajax": "^2.0.0",
-    "uview-plus": "^3.0.0",
+    "uni-ajax": "^2.4.5",
+    "uview-plus": "^3.1.16",
     "vue": "^3.0.0"
   },
   "devDependencies": {
@@ -62,7 +62,7 @@
     "@dcloudio/uni-cli-shared": "vue3",
     "@dcloudio/vite-plugin-uni": "vue3",
     "@ttou/define-config": "^2.1.1",
-    "@ttou/uview-typings": "^1.0.2",
+    "@ttou/uview-typings": "^1.0.15",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@typescript-eslint/parser": "^5.0.0",
     "@vue/eslint-config-typescript": "^11.0.0",
