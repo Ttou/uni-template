@@ -21,5 +21,6 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
+/* stylelint-disable-next-line import-notation */
 @import 'uview-plus/index.scss';
 </style>
