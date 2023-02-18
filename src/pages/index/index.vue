@@ -7,7 +7,7 @@
       <u-button class="btn" type="info" @click="handleCount">计数</u-button>
       <u-button class="btn" type="info" @click="handleOpen">弹窗</u-button>
     </view>
-    <u-popup :show="show" mode="center" @close="handleClose">
+    <u-popup :show="show" mode="center" closeable @close="handleClose">
       <view class="dialog">
         <view class="content">
           <text>Hello World</text>

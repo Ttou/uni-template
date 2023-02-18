@@ -1,18 +1,20 @@
-import { ref } from 'vue'
+import { reactive, toRefs } from 'vue'
 
 export function useDialog() {
-  const show = ref(false)
+  const state = reactive({
+    show: false
+  })
 
   function handleOpen() {
-    show.value = true
+    state.show = true
   }
 
   function handleClose() {
-    show.value = false
+    state.show = false
   }
 
   return {
-    show,
+    ...toRefs(state),
     handleOpen,
     handleClose
   }
