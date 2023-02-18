@@ -18,19 +18,21 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue'
+import { defineComponent, reactive, toRefs } from 'vue'
 
 import { useCount, useDialog } from './hooks'
 
 export default defineComponent({
   setup() {
-    const title = ref('Hello UniApp')
+    const state = reactive({
+      title: 'Hello UniApp'
+    })
 
     const countHook = useCount()
     const dialogHook = useDialog()
 
     return {
-      title,
+      ...toRefs(state),
       ...countHook,
       ...dialogHook
     }
