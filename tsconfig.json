@@ -35,5 +35,6 @@
   "vueCompilerOptions": {
     "target": 3,
     "experimentalResolveStyleCssClasses": "scoped"
-  }
+  },
+  "references": [{ "path": "./tsconfig.node.json" }]
 }
