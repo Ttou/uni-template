@@ -6,7 +6,7 @@ Uni Template 是一个开源的小程序模版。
 
 ## 特性
 
-- **技术栈**：使用 Vue3/UniApp/uViewPlus 等前端前沿技术开发
+- **技术栈**：使用 Vue3/UniApp/TMUI 等前端前沿技术开发
 - **TypeScript**：应用程序级 JavaScript 的语言
 
 ## 准备
@@ -14,7 +14,7 @@ Uni Template 是一个开源的小程序模版。
 - [Node](http://nodejs.org/) 和 [Git](https://git-scm.com/)
 - [Vue3](https://v3.cn.vuejs.org/guide/introduction.html)
 - [UniApp](https://uniapp.dcloud.io/)
-- [uViewPlus](https://uiadmin.net/uview-plus/components/intro.html)
+- [TMUI](https://tmui.design/)
 
 ## 安装使用
 
@@ -45,5 +45,9 @@ npm run build:mp-weixin
 ## 注意事项
 
 - 装上 volar 插件后更好的支持模板开发
-- 不要用 pnpm 安装依赖
 - 使用 HBuilderX 打开项目时，以 src 为根目录
+
+## 待处理
+
+- h5 下对自定义组件添加样式没有自定义组件自身的样式优先级高
+- h5 下 autoDark 配置为 false 不生效

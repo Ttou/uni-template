@@ -20,7 +20,14 @@ export default defineComponent({
 })
 </script>
 
-<style lang="scss">
-/* stylelint-disable-next-line import-notation */
-@import 'uview-plus/index.scss';
+<style>
+/* #ifdef APP-PLUS-NVUE */
+@import url('./tmui/scss/nvue.css');
+
+/* #endif */
+
+/* #ifndef APP-PLUS-NVUE */
+@import url('./tmui/scss/noNvue.css');
+
+/* #endif */
 </style>

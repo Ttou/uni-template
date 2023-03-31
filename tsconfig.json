@@ -28,13 +28,11 @@
   },
   "include": [
     "src/**/*.ts",
-    "src/**/*.tsx",
     "src/**/*.vue",
     "types/**/*.d.ts"
   ],
   "vueCompilerOptions": {
-    "target": 3,
-    "experimentalResolveStyleCssClasses": "scoped"
+    "target": 3
   },
   "references": [{ "path": "./tsconfig.node.json" }]
 }
