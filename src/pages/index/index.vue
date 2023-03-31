@@ -1,7 +1,7 @@
 <template>
   <tm-app>
     <image class="logo" src="../../static/logo.png" />
-    <view class="text-wrap">
+    <view class="textWrap">
       <text class="title">{{ title }}</text>
       <text class="count">{{ count }}</text>
       <tm-button class="btn" @click="handleCount">计数</tm-button>
@@ -47,7 +47,7 @@ export default defineComponent({
   margin: 200rpx auto 50rpx;
 }
 
-.text-wrap {
+.textWrap {
   display: flex;
   justify-content: center;
   align-items: center;
