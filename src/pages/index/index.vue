@@ -1,6 +1,8 @@
 <template>
   <tm-app>
-    <image class="logo" src="../../static/logo.png" />
+    <view class="logoWrap">
+      <image class="logo" src="../../static/logo.png" />
+    </view>
     <view class="textWrap">
       <text class="title">{{ title }}</text>
       <text class="count">{{ count }}</text>
@@ -41,10 +43,19 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-.logo {
+:deep(.app) > .flex {
+  align-items: center;
+  justify-content: center;
+}
+
+.logoWrap {
   height: 200rpx;
   width: 200rpx;
-  margin: 200rpx auto 50rpx;
+
+  .logo {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .textWrap {
@@ -52,6 +63,7 @@ export default defineComponent({
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-top: 50rpx;
 
   .title {
     font-size: 36rpx;

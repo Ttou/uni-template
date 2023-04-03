@@ -15,6 +15,12 @@ module.exports = defineStylelintConfig({
   rules: {
     'block-no-empty': null,
     'unit-no-unknown': null,
-    'selector-class-pattern': null
+    'at-rule-no-unknown': null,
+    'function-no-unknown': null,
+    'selector-class-pattern': null,
+    'selector-pseudo-class-no-unknown': null,
+    'no-descending-specificity': null,
+    'keyframe-selector-notation': null,
+    'annotation-no-unknown': null
   }
 })
