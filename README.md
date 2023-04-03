@@ -50,4 +50,4 @@ npm run build:mp-weixin
 ## 待处理
 
 - h5 下对自定义组件添加样式没有自定义组件自身的样式优先级高
-- h5 下 autoDark 配置为 false 不生效
+- 支付宝开发工具里报错：<https://gitee.com/LYTB/tmui-design/issues/I6R2NK>
