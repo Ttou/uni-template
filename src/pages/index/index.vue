@@ -43,12 +43,8 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-:deep(.app) > .flex {
-  align-items: center;
-  justify-content: center;
-}
-
 .logoWrap {
+  margin: 0 auto;
   height: 200rpx;
   width: 200rpx;
 
