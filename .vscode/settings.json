@@ -7,5 +7,17 @@
     "@": "${workspaceFolder}/src"
   },
   "css.validate": false,
-  "scss.validate": false
+  "scss.validate": false,
+  "cSpell.words": [
+    "automator",
+    "commitlint",
+    "dcloudio",
+    "kuaishou",
+    "pinia",
+    "quickapp",
+    "stacktracey",
+    "stylelint",
+    "toutiao",
+    "weixin"
+  ]
 }
