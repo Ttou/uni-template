@@ -36,6 +36,7 @@
     "lint:script": "eslint \"./src/**/*.{ts,tsx,vue}\" --fix",
     "lint:style": "stylelint \"./src/**/*.{css,scss,vue}\" --fix",
     "commit": "git add . && git cz",
+    "update": "npx @dcloudio/uvm",
     "postinstall": "npx simple-git-hooks"
   },
   "dependencies": {
