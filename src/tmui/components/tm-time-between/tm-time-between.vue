@@ -81,12 +81,12 @@
     <view>
       <tm-time-view
         :showDetail="props.showDetail"
-        :format="props.format"
         :immediateChange="props.immediateChange"
         :start="starTtime"
         :end="endTtime"
         @change="timeChange"
         v-model="picker_focus_date"
+		v-model:model-str="picker_focus_date_str"
         :defaultValue="picker_focus_date"
       ></tm-time-view>
     </view>
@@ -218,8 +218,18 @@ const props = defineProps({
     type: Array as PropType<Array<String | Number | Date>>,
     default: () => [],
   },
+  /**
+   * 不受formart控制，始终完整显示，必须规范
+   * */
   modelValue: {
     type: Array as PropType<Array<String | Number | Date>>,
+    default: () => [],
+  },
+  /**
+   * 只对外显示输出formart的格式字符串，可能不规范
+   * */
+  modelStr: {
+    type: Array as PropType<Array<String>>,
     default: () => [],
   },
   /** 当改变日期时，是否需要同步到vmodel变量中，立即执行双向同步，如果为false日期的改变不会同步到vmodel中
@@ -236,13 +246,14 @@ const props = defineProps({
     default: true,
   },
 });
-const emits = defineEmits(["change", "update:modelValue", "confirm", "clear"]);
+const emits = defineEmits(["change", "update:modelValue", "update:modelStr", "confirm", "clear"]);
 const valuedate_start = ref("");
 const valuedate_end = ref("");
 const focusIndex = ref(-1);
 const picker_focus_date = ref("");
+const picker_focus_date_str = ref("");
 const defaultFormat = "YYYY/MM/DD HH:mm:ss";
-let tid = NaN;
+let tid:any = NaN;
 /** 开始时间 */
 const starTtime = computed(()=>DayJs(props.start).format(defaultFormat))
 /** 结束时间 */
@@ -252,6 +263,7 @@ setDate(props.defaultValue);
 watch(
   () => props.modelValue,
   () => {
+	clearTimeout(tid)
     tid = setTimeout(() => {
       setDate(props.modelValue);
     }, 100);
@@ -262,8 +274,7 @@ const valuedate_start_str = computed(() => {
   if (!valuedate_start.value) return "";
   return DayJs(valuedate_start.value).format(props.format);
 });
-//默认进入页面是选中开始的,就要赋值默认值.
-// valuedate_start.value = valuedate_start_str.value
+
 const valuedate_end_str = computed(() => {
   if (!valuedate_end.value) return "";
   return DayJs(valuedate_end.value).format(props.format);
@@ -272,59 +283,52 @@ function changeFocus(index: number) {
   focusIndex.value = index;
   let vstd = valuedate_start.value;
   let vsed = valuedate_end.value;
-
+	
   if (index == 0 && !valuedate_start.value) {
-    vstd = valuedate_end.value || DayJs().format(defaultFormat);
+	 
+    vstd =  DayJs(valuedate_end.value).isValid()?valuedate_end.value:DayJs().format(defaultFormat)
   }
   if (index == 1 && !valuedate_end.value) {
-    vsed = valuedate_start.value || DayJs().format(defaultFormat);
+    vsed = DayJs(valuedate_start.value).isValid()?valuedate_start.value:DayJs().format(defaultFormat)
   }
-
+	
   setDate([vstd, vsed]);
 }
+
+
 function timeChange(evt: string) {
+
   if (focusIndex.value == -1) focusIndex.value = 0;
 
   if (focusIndex.value == 0) {
-    valuedate_start.value = DayJs(evt).format(defaultFormat);
+    valuedate_start.value = picker_focus_date.value;
   } else if (focusIndex.value == 1) {
-    valuedate_end.value = DayJs(evt).format(defaultFormat);
+    valuedate_end.value = picker_focus_date.value;
   }
+
   // #ifdef APP-NVUE
-  checkTimeVaild();
-  let nst = DayJs(valuedate_start.value).isValid()
-    ? DayJs(valuedate_start.value).format(props.format)
-    : "";
-  let ese = DayJs(valuedate_end.value).isValid()
-    ? DayJs(valuedate_end.value).format(props.format)
-    : "";
-  if (props.asyncModel) {
-    emits("update:modelValue", [nst, ese]);
-  }
-  nextTick(() => {
-    emits("change", [nst, ese]);
-  });
+  updateTime()
   // #endif
 
   // #ifndef APP-NVUE
   nextTick(() => {
-    checkTimeVaild();
-    let nst = DayJs(valuedate_start.value).isValid()
-      ? DayJs(valuedate_start.value).format(props.format)
-      : "";
-    let ese = DayJs(valuedate_end.value).isValid()
-      ? DayJs(valuedate_end.value).format(props.format)
-      : "";
-    if (props.asyncModel) {
-      emits("update:modelValue", [nst, ese]);
-    }
-    nextTick(() => {
-      emits("change", [nst, ese]);
-    });
+    updateTime()
   });
   // #endif
-}
+  
+  
 
+}
+function updateTime(){
+	  checkTimeVaild();
+	  if (props.asyncModel) {
+		emits("update:modelValue", [valuedate_start.value, valuedate_end.value]);
+		emits("update:modelStr", [DayJs(valuedate_start.value).format(props.format), DayJs(valuedate_end.value).format(props.format)]);
+	  }
+	  nextTick(() => {
+		emits("change", [valuedate_start.value, valuedate_end.value]);
+	  });
+}
 //检查两个时间的正确性,就是后者要大于前者.
 function checkTimeVaild() {
   if (valuedate_end.value.length == 0 || valuedate_start.value.length == 0) return;
@@ -398,40 +402,32 @@ function quickChangeClick(item: quickBtnType) {
 }
 
 function setDate(ar: Array<String | Number | Date>) {
-  if (Array.isArray(ar)) {
-    if (ar.length == 2) {
-      valuedate_start.value = DayJs(ar[0]).isValid()
-        ? DayJs(ar[0]).format(defaultFormat)
-        : "";
-      valuedate_end.value = DayJs(ar[1]).isValid()
-        ? DayJs(ar[1]).format(defaultFormat)
-        : "";
-      focusIndex.value = focusIndex.value == -1 ? 0 : focusIndex.value;
-
-      if (!DayJs(ar[focusIndex.value]).isValid()) return;
-      picker_focus_date.value = DayJs(ar[focusIndex.value]).format(defaultFormat);
-    }
+  if (Array.isArray(ar)&&ar?.length == 2) {
+    valuedate_start.value = DayJs(ar[0]).isValid()
+      ? DayJs(ar[0]).format(defaultFormat)
+      : "";
+    valuedate_end.value = DayJs(ar[1]).isValid()
+      ? DayJs(ar[1]).format(defaultFormat)
+      : "";
+    focusIndex.value = focusIndex.value == -1 ? 0 : focusIndex.value;
+    
+    if (!DayJs(ar[focusIndex.value]).isValid()) return;
+    picker_focus_date.value = DayJs(ar[focusIndex.value]).format(defaultFormat);
   }
 }
 function confirm() {
-  let nst = valuedate_start.value
-    ? DayJs(valuedate_start.value).format(props.format)
-    : "";
-  let ese = valuedate_end.value ? DayJs(valuedate_end.value).format(props.format) : "";
-  emits("update:modelValue", [nst, ese]);
-  emits("confirm", [nst, ese]);
+  emits("update:modelValue", [valuedate_start.value, valuedate_end.value]);
+  emits("update:modelStr", [DayJs(valuedate_start.value).format(props.format), DayJs(valuedate_end.value).format(props.format)]);
+  emits("confirm", [valuedate_start.value, valuedate_end.value]);
 }
 function getNowDate(): [string, string] {
-  let nst = valuedate_start.value
-    ? DayJs(valuedate_start.value).format(props.format)
-    : "";
-  let ese = valuedate_end.value ? DayJs(valuedate_end.value).format(props.format) : "";
-  emits("update:modelValue", [nst, ese]);
-  return [nst, ese];
+  updateTime();
+  return [valuedate_start.value, valuedate_end.value];
 }
 function clear() {
   valuedate_start.value = "";
   valuedate_end.value = "";
+  emits("update:modelStr", ["",""]);
   emits("clear");
 }
 defineExpose({ getNowDate });
