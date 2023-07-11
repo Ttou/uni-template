@@ -1,27 +1,21 @@
-import ajax from 'uni-ajax'
+import Request from 'luch-request'
 
-const instance = ajax.create({
-  baseURL: '/api'
+const ajax = new Request({
+  baseURL: '/api',
+  timeout: 8000
 })
 
-instance.interceptors.request.use(
-  config => {
-    return config
+ajax.interceptors.request.use(config => {
+  return config
+})
+
+ajax.interceptors.response.use(
+  res => {
+    return res.data
   },
-  error => {
-    // 处理请求错误
-    return Promise.reject(error)
+  err => {
+    return Promise.reject(err)
   }
 )
 
-instance.interceptors.response.use(
-  response => {
-    return response.data
-  },
-  error => {
-    // 处理响应错误
-    return Promise.reject(error)
-  }
-)
-
-export { instance as ajax }
+export { ajax }

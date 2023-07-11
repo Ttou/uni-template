@@ -1,3 +1,3 @@
 import { ajax } from '@/utils'
 
-export default {}
+export const commonApi = {}
