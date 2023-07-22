@@ -6,10 +6,10 @@
     <view class="textWrap">
       <text class="title">{{ title }}</text>
       <text class="count">{{ count }}</text>
-      <nut-button class="btn" type="primary" @click="handleCount">
+      <nut-button custom-class="btn" type="primary" @click="handleCount">
         计数
       </nut-button>
-      <nut-button class="btn" type="primary" @click="handleOpen">
+      <nut-button custom-class="btn" type="primary" @click="handleOpen">
         弹窗
       </nut-button>
     </view>
@@ -88,7 +88,7 @@ export default defineComponent({
     }
   }
 
-  .btn + .btn {
+  :deep(.btn + .btn) {
     margin-top: 20rpx;
   }
 
