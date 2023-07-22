@@ -2,7 +2,8 @@
   "easycom": {
     "autoscan": true,
     "custom": {
-      "^tm-(.*)": "@/tmui/components/tm-$1/tm-$1.vue"
+      "^nut-(.*)?-(.*)": "uniapp-nutui/components/$1$2/$1$2.vue",
+      "^nut-(.*)": "uniapp-nutui/components/$1/$1.vue"
     }
   },
   "pages": [

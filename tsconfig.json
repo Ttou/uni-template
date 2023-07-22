@@ -21,8 +21,7 @@
     ],
     "types": [
       "@dcloudio/types",
-      "@ttou/uview-typings/v3",
-      "@ttou/uview-typings/refs",
+      "uniapp-nutui/global",
       "vite/client"
     ]
   },
