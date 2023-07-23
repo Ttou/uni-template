@@ -50,3 +50,4 @@ npm run build:mp-weixin
 ## 待处理
 
 - h5 下对自定义组件添加样式没有自定义组件自身的样式优先级高
+- volar 对组件库定义的全局组件类型无法解析：[issue](https://github.com/vuejs/language-tools/issues/3388)
