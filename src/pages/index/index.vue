@@ -27,14 +27,9 @@
 import { onLoad, onShow } from '@dcloudio/uni-app'
 import { defineComponent } from 'vue'
 
-import { Welcome } from '@/components'
-
 import { useCount, useDialog, useInit } from './hooks'
 
 export default defineComponent({
-  components: {
-    Welcome
-  },
   setup() {
     const initHook = useInit()
     const countHook = useCount()
