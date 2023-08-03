@@ -1,16 +1,32 @@
 import uni from '@dcloudio/vite-plugin-uni'
 import { defineConfig } from 'vite'
 
-export default defineConfig({
-  css: {
-    preprocessorOptions: {
-      scss: {
-        additionalData: '@import "uniapp-nutui/styles/variables.scss";'
+export default defineConfig(({ mode }) => {
+  console.log(mode)
+
+  return {
+    resolve: {
+      alias: [
+        ...(mode === 'production'
+          ? [
+              {
+                find: 'vue-types',
+                replacement: 'vue-types/shim'
+              }
+            ]
+          : [])
+      ]
+    },
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: '@import "uniapp-nutui/styles/variables.scss";'
+        }
       }
+    },
+    plugins: [uni()],
+    server: {
+      port: 8080
     }
-  },
-  plugins: [uni()],
-  server: {
-    port: 8080
   }
 })

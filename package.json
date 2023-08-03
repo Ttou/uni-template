@@ -59,7 +59,8 @@
     "pinia": "^2.0.36",
     "uniapp-nutui": "^0.2.0",
     "vue": "^3.2.47",
-    "vue-i18n": "^9.1.9"
+    "vue-i18n": "^9.1.9",
+    "vue-types": "^5.1.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.6.3",
@@ -81,6 +82,7 @@
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "eslint-plugin-vue": "^9.15.1",
+    "is-plain-object": "^5.0.0",
     "lint-staged": "^13.2.3",
     "postcss": "^8.4.25",
     "postcss-html": "^1.5.0",

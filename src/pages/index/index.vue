@@ -4,7 +4,7 @@
       <image class="logo" src="@/static/logo.png" />
     </view>
     <view class="textWrap">
-      <text class="title">{{ title }}</text>
+      <Welcome :msg="title" />
       <text class="count">{{ count }}</text>
       <nut-button custom-class="btn" type="primary" @click="handleCount">
         计数
@@ -27,9 +27,14 @@
 import { onLoad, onShow } from '@dcloudio/uni-app'
 import { defineComponent } from 'vue'
 
+import { Welcome } from '@/components'
+
 import { useCount, useDialog, useInit } from './hooks'
 
 export default defineComponent({
+  components: {
+    Welcome
+  },
   setup() {
     const initHook = useInit()
     const countHook = useCount()
@@ -77,11 +82,6 @@ export default defineComponent({
     align-items: center;
     flex-direction: column;
     margin-top: 50rpx;
-
-    .title {
-      font-size: 36rpx;
-      color: #8f8f94;
-    }
 
     .count {
       margin: 20rpx auto;
