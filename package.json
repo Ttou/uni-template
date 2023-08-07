@@ -57,7 +57,7 @@
     "dayjs": "^1.11.9",
     "luch-request": "^3.1.0",
     "pinia": "^2.0.36",
-    "uniapp-nutui": "^0.2.0",
+    "uniapp-nutui": "^0.2.1",
     "vue": "^3.2.47",
     "vue-i18n": "^9.1.9",
     "vue-types": "^5.1.1"
