@@ -1,18 +1,20 @@
 import { defineStore } from 'pinia'
-import { ref } from 'vue'
+import { reactive, toRefs } from 'vue'
 
 export const useMainStore = defineStore('main', () => {
-  const count = ref(0)
+  const state = reactive({
+    count: 0
+  })
 
   /**
    * 加法
    */
   function increment() {
-    count.value++
+    state.count++
   }
 
   return {
-    count,
+    ...toRefs(state),
     increment
   }
 })
