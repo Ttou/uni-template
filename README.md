@@ -46,6 +46,7 @@ npm run build:mp-weixin
 
 - 装上 volar 插件后更好的支持模板开发
 - 使用 HBuilderX 打开项目时，以 src 为根目录
+- 微信小程序要支持 `vue3`，需设置基础库最低版本为 `2.11.2` 或以上，`2.11.2` 对应 `chrome>=53,ios>=10`
 
 ## 待处理
 
