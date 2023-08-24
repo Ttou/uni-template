@@ -1,10 +1,7 @@
 {
   "easycom": {
     "autoscan": true,
-    "custom": {
-      "^nut-(.*)?-(.*)": "uniapp-nutui/components/$1$2/$1$2.vue",
-      "^nut-(.*)": "uniapp-nutui/components/$1/$1.vue"
-    }
+    "custom": {}
   },
   "pages": [
     //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages

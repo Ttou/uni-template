@@ -13,13 +13,14 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "preserve",
+    "allowJs": true,
 
     /* Custom */
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
     },
-    "types": ["@dcloudio/types", "uniapp-nutui/global", "vite/client"]
+    "types": ["@dcloudio/types", "@ttou/uv-typings/v3", "vite/client"]
   },
   "include": ["src", "types"],
   "exclude": ["node_modules"],

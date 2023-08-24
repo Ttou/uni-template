@@ -15,13 +15,6 @@ export default defineConfig(({ mode }) => {
           : [])
       ]
     },
-    css: {
-      preprocessorOptions: {
-        scss: {
-          additionalData: '@import "uniapp-nutui/styles/variables.scss";'
-        }
-      }
-    },
     plugins: [uni()],
     server: {
       port: 8080

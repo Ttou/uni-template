@@ -2,11 +2,11 @@ import { reactive, toRefs } from 'vue'
 
 export function useDialog() {
   const state = reactive({
-    show: false
+    popupRef: {} as UvPopupRef
   })
 
   function handleOpen() {
-    state.show = true
+    state.popupRef.open()
   }
 
   return {

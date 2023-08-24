@@ -22,5 +22,5 @@ export default defineComponent({
 
 <style lang="scss">
 /* stylelint-disable-next-line import-notation */
-@import 'uniapp-nutui/styles/index';
+@import './uni_modules/uv-ui-tools/index.scss';
 </style>

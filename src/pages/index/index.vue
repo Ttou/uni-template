@@ -6,20 +6,20 @@
     <view class="textWrap">
       <Welcome :msg="title" />
       <text class="count">{{ count }}</text>
-      <nut-button custom-class="btn" type="primary" @click="handleCount">
-        计数
-      </nut-button>
-      <nut-button custom-class="btn" type="primary" @click="handleOpen">
-        弹窗
-      </nut-button>
+      <view class="btn">
+        <uv-button type="primary" @click="handleCount">计数</uv-button>
+      </view>
+      <view class="btn">
+        <uv-button type="primary" @click="handleOpen">弹窗</uv-button>
+      </view>
     </view>
-    <nut-popup v-model:visible="show" closeable>
+    <uv-popup ref="popupRef" closeable>
       <view class="dialog">
         <view class="content">
           <text>Hello World</text>
         </view>
       </view>
-    </nut-popup>
+    </uv-popup>
   </view>
 </template>
 
@@ -83,7 +83,7 @@ export default defineComponent({
     }
   }
 
-  :deep(.btn + .btn) {
+  .btn + .btn {
     margin-top: 20rpx;
   }
 
