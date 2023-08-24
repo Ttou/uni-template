@@ -37,7 +37,7 @@
     "lint:style": "stylelint \"./src/**/*.{css,scss,vue}\" --fix",
     "commit": "git add . && git cz",
     "uvm": "npx @dcloudio/uvm",
-    "postinstall": "npx simple-git-hooks"
+    "postinstall": "pnpx simple-git-hooks"
   },
   "dependencies": {
     "@dcloudio/uni-app": "3.0.0-3080720230703001",
