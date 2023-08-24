@@ -142,9 +142,11 @@
 				this.$emit('clickItem', item);
 			},
 			init() {
+				uni.$off(`${this.sign}_GETRECT`);
 				uni.$on(`${this.sign}_GETRECT`, rect => {
 					this.rect = rect;
 				})
+				uni.$off(`${this.sign}_CLICKMENU`);
 				uni.$on(`${this.sign}_CLICKMENU`, async res => {
 					if (res.show) {
 						this.open();
@@ -166,9 +168,11 @@
 					// #ifdef APP-NVUE
 					this.animation(res.height);
 					// #endif
+					this.$emit('popupChange', { show: true });
 				})
 			},
 			close() {
+				if(!this.show) return;
 				this.height = 0;
 				// #ifndef APP-NVUE
 				this.height = 0;
@@ -178,6 +182,7 @@
 				// #endif
 				this.show = false;
 				uni.$emit(`${this.sign}_CLOSEPOPUP`);
+				this.$emit('popupChange', { show: false });
 			},
 			clickOverlay() {
 				if (this.clickOverlayOnClose) {
