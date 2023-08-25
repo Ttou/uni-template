@@ -19,11 +19,17 @@
     "paths": {
       "@/*": ["src/*"]
     },
-    "types": ["@dcloudio/types", "@ttou/uv-typings/v3", "vite/client"]
+    "types": [
+      "@dcloudio/types",
+      "@ttou/uv-typings/v3",
+      "@uni-helper/uni-app-types",
+      "vite/client"
+    ]
   },
   "include": ["src", "types"],
   "exclude": ["node_modules"],
   "vueCompilerOptions": {
+    "nativeTags": ["block", "component", "template", "slot"],
     "target": 3
   },
   "references": [{ "path": "./tsconfig.node.json" }]
