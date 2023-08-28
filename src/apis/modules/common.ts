@@ -1,3 +1,5 @@
-import { ajax } from '@/utils'
+import { useUv } from '@/hooks'
+
+const uv = useUv()
 
 export const commonApi = {}
