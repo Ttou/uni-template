@@ -47,7 +47,8 @@ npm run build:mp-weixin
 - 装上 volar 插件后更好的支持模板开发
 - 使用 HBuilderX 打开项目时，以 src 为根目录
 - 微信小程序要支持 `vue3`，需设置基础库最低版本为 `2.11.2` 或以上，`2.11.2` 对应 `chrome>=53,ios>=10`
-- uvUI 版本为 `1.1.9`，微信小程序基础库需要设置在 `2.19.2` 及以上，支付宝小程序需要开启 `component2` 模式
+- uvUI 版本为 `1.1.11`，微信小程序基础库需要设置在 `2.19.2` 及以上，支付宝小程序需要开启 `component2` 模式
+- uvUI 请去[NPM](https://npmmirror.com/package/@climblee/uv-ui/home) 下载产物包，替换 `uni_modules` 下 `uv-ui` 目录完成升级
 
 ## 待处理
 

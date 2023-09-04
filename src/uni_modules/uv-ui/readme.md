@@ -9,7 +9,7 @@
 [![star](https://img.shields.io/github/stars/climblee/uv-ui?style=flat-square&logo=GitHub)](https://github.com/climblee/uv-ui)
 [![issues](https://img.shields.io/github/issues/climblee/uv-ui?style=flat-square&logo=GitHub)](https://github.com/climblee/uv-ui/issues)
 [![Website](https://img.shields.io/badge/uvui-up-blue?style=flat-square)](https://www.uvui.cn)
-[![version](https://img.shields.io/badge/version-1.1.9-brightgreen.svg)](https://www.uvui.cn/components/changelog.html)
+[![version](https://img.shields.io/badge/version-1.1.10-brightgreen.svg)](https://www.uvui.cn/components/changelog.html)
 [![license](https://img.shields.io/github/license/climblee/uv-ui?style=flat-square)](https://en.wikipedia.org/wiki/MIT_License)
 
 ## 温馨提示：如需下载uv-ui示例项目，请不要使用【下载插件ZIP】按钮。
@@ -131,6 +131,7 @@
 | uv-swiper | [轮播图](https://www.uvui.cn/components/swiper.html) |
 | uv-collapse | [折叠面板](https://www.uvui.cn/components/collapse.html) |
 | uv-grid | [宫格布局](https://www.uvui.cn/components/grid.html) |
+| uv-album | [相册](https://www.uvui.cn/components/album.html) |
 | uv-tabbar | [底部导航栏](https://www.uvui.cn/components/tabbar.html) |
 | uv-back-top | [返回顶部](https://www.uvui.cn/components/backTop.html) |
 | uv-navbar | [自定义导航栏](https://www.uvui.cn/components/navbar.html) |
