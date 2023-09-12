@@ -184,7 +184,7 @@
 		width: 650rpx;
 		border-radius: $uv-modal-border-radius;
 		overflow: hidden;
-
+	
 		&__title {
 			font-size: 16px;
 			font-weight: bold;
@@ -192,12 +192,12 @@
 			text-align: center;
 			padding-top: 25px;
 		}
-
+	
 		&__content {
 			padding: 12px 25px 25px 25px;
 			@include flex;
 			justify-content: center;
-
+	
 			&__text {
 				line-height: 48rpx;
 				font-size: 15px;
@@ -205,15 +205,11 @@
 				flex: 1;
 			}
 		}
-
+	
 		&__button-group {
 			@include flex;
-
-			&--confirm-button {
-				flex-direction: column;
-				padding: 0px 25px 15px 25px;
-			}
-
+			height: 48px;
+	
 			&__wrapper {
 				flex: 1;
 				@include flex;
@@ -230,11 +226,11 @@
 				&--only-confirm {
 					border-bottom-left-radius: $uv-modal-border-radius;
 				}
-
+	
 				&--hover {
 					background-color: $uv-bg-color;
 				}
-
+	
 				&__text {
 					color: $uv-content-color;
 					font-size: 16px;
