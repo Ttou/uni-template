@@ -23,4 +23,8 @@ export default defineComponent({
 <style lang="scss">
 /* stylelint-disable-next-line import-notation */
 @import '@/uni_modules/uv-ui/index.scss';
+
+page {
+  height: 100%;
+}
 </style>

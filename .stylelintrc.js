@@ -21,6 +21,7 @@ module.exports = defineStylelintConfig({
     'selector-pseudo-class-no-unknown': null,
     'no-descending-specificity': null,
     'keyframe-selector-notation': null,
-    'annotation-no-unknown': null
+    'annotation-no-unknown': null,
+    'selector-type-no-unknown': [true, { ignore: ['default-namespace'] }]
   }
 })

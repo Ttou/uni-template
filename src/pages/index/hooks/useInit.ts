@@ -15,11 +15,18 @@ export function useInit() {
     }, 1500)
   }
 
+  function handleJump() {
+    uni.navigateTo({
+      url: '/pages/other/index'
+    })
+  }
+
   onLoad(() => {
     init()
   })
 
   return {
-    ...toRefs(state)
+    ...toRefs(state),
+    handleJump
   }
 }

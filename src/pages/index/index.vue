@@ -12,6 +12,9 @@
       <view class="btn">
         <uv-button type="primary" @click="handleOpen">弹窗</uv-button>
       </view>
+      <view class="btn">
+        <uv-button type="primary" @click="handleJump">跳转</uv-button>
+      </view>
     </view>
     <uv-popup ref="popupRef" closeable>
       <view class="dialog">
