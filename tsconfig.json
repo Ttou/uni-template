@@ -28,6 +28,7 @@
     },
     "types": [
       "@dcloudio/types",
+      "@ttou/uv-typings/shim",
       "@ttou/uv-typings/v3",
       "@uni-helper/uni-app-types",
       "vite/client"
