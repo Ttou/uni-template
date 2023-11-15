@@ -1,1 +1,1 @@
-export * from './Welcome.define'
+export { type WelcomeProps, welcomeProps } from './Welcome.define'
