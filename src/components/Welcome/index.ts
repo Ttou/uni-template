@@ -1,1 +1,1 @@
-export type * from './Welcome.type'
+export * from './Welcome'
