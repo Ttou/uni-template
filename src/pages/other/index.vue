@@ -1,6 +1,9 @@
 <template>
   <view class="view">
     <text>内容</text>
+    <view class="btn">
+      <uv-button type="primary" @click="handleBack">返回</uv-button>
+    </view>
   </view>
 </template>
 
@@ -9,7 +12,13 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   setup() {
-    return {}
+    function handleBack() {
+      uni.navigateBack()
+    }
+
+    return {
+      handleBack
+    }
   }
 })
 </script>
@@ -21,5 +30,9 @@ export default defineComponent({
   align-items: center;
   flex-flow: column nowrap;
   min-height: 100%;
+
+  .btn {
+    margin-top: 20rpx;
+  }
 }
 </style>

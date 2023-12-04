@@ -14,3 +14,7 @@
 
 // 避免小程序警告提示
 $uvui-nvue-style: false;
+
+// uvUI 主题配置
+@import '@climblee/uv-ui/theme.scss';
+@import '@/theme.scss';
