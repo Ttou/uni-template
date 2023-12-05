@@ -4,12 +4,16 @@
 import config from '@climblee/uv-ui/libs/config/config.js'
 // 颜色渐变相关
 import * as colorGradient from '@climblee/uv-ui/libs/function/colorGradient.js'
+// 防抖
+import debounce from '@climblee/uv-ui/libs/function/debounce.js'
 // 公共工具函数
 import * as index from '@climblee/uv-ui/libs/function/index.js'
 // 平台
 import platform from '@climblee/uv-ui/libs/function/platform.js'
 // 规则检验
 import * as test from '@climblee/uv-ui/libs/function/test.js'
+// 节流
+import throttle from '@climblee/uv-ui/libs/function/throttle.js'
 // 全局挂载引入http相关请求拦截插件
 import Request from '@climblee/uv-ui/libs/luch-request'
 
@@ -19,6 +23,8 @@ const uv = {
   test,
   ...index,
   ...colorGradient,
+  debounce,
+  throttle,
   http: new Request()
 }
 
