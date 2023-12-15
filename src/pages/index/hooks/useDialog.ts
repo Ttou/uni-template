@@ -2,11 +2,15 @@ import { reactive, toRefs } from 'vue'
 
 export function useDialog() {
   const state = reactive({
-    popupRef: {} as UvPopupRef
+    popupRef: {} as UvPopupRef,
+    info: {} as UniApp.GetSystemInfoResult
   })
 
   function handleOpen() {
-    state.popupRef.open()
+    uni.getSystemInfo().then(res => {
+      state.info = res
+      state.popupRef.open()
+    })
   }
 
   return {

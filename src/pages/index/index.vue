@@ -19,7 +19,11 @@
     <uv-popup ref="popupRef" closeable>
       <view class="dialog">
         <view class="content">
-          <text>Hello World</text>
+          <uv-cell-group :border="false" customStyle="width: 100%">
+            <uv-cell title="设备类型" :value="info.deviceType"></uv-cell>
+            <uv-cell title="浏览器类型" :value="info.browserName"></uv-cell>
+            <uv-cell title="浏览器版本" :value="info.browserVersion"></uv-cell>
+          </uv-cell-group>
         </view>
       </view>
     </uv-popup>
@@ -27,7 +31,7 @@
 </template>
 
 <script lang="ts">
-import { onLoad, onShow } from '@dcloudio/uni-app'
+import { onHide, onLoad, onShow } from '@dcloudio/uni-app'
 import { defineComponent } from 'vue'
 
 import { useCount, useDialog, useInit } from './hooks'
@@ -44,6 +48,10 @@ export default defineComponent({
 
     onShow(options => {
       console.log('page show', options)
+    })
+
+    onHide(() => {
+      console.log('Page Hide')
     })
 
     return {
@@ -82,25 +90,19 @@ export default defineComponent({
     margin-top: 50rpx;
 
     .count {
-      margin: 20rpx auto;
+      margin-top: 20rpx;
     }
-  }
 
-  .btn + .btn {
-    margin-top: 20rpx;
+    .btn {
+      margin-top: 20rpx;
+    }
   }
 
   .dialog {
     width: 400rpx;
-    height: 200rpx;
 
     .content {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-      width: 100%;
-      font-size: 28rpx;
+      padding: 40rpx 0;
     }
   }
 }
