@@ -16,7 +16,7 @@
         <uv-button type="primary" @click="handleJump">跳转</uv-button>
       </view>
     </view>
-    <uv-popup ref="popupRef" closeable>
+    <uv-popup ref="popupRef" closeable :safeAreaInsetBottom="false">
       <view class="dialog">
         <view class="content">
           <uv-cell-group :border="false" customStyle="width: 100%">
