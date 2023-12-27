@@ -21,7 +21,6 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-/* stylelint-disable-next-line import-notation */
 @import '@climblee/uv-ui/index.scss';
 
 page {
