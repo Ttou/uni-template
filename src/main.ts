@@ -9,6 +9,7 @@ export function createApp() {
   const pinia = Pinia.createPinia()
 
   app.use(pinia)
+
   useUv()
 
   return {

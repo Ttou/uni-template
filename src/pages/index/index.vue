@@ -65,16 +65,15 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .view {
-  display: flex;
   justify-content: center;
-  align-items: center;
-  flex-flow: column nowrap;
-  min-height: 100%;
+  min-height: $page-height;
 
   .logoWrap {
     height: 200rpx;
     width: 200rpx;
-    margin-top: 40rpx;
+    padding: 20rpx;
+    margin: 0 auto;
+    box-sizing: border-box;
 
     .logo {
       width: 100%;
@@ -83,10 +82,7 @@ export default defineComponent({
   }
 
   .textWrap {
-    display: flex;
-    justify-content: center;
     align-items: center;
-    flex-direction: column;
     margin-top: 50rpx;
 
     .count {

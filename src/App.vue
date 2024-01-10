@@ -22,8 +22,4 @@ export default defineComponent({
 
 <style lang="scss">
 @import '@climblee/uv-ui/index.scss';
-
-page {
-  height: 100%;
-}
 </style>

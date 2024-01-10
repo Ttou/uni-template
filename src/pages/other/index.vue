@@ -25,11 +25,9 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .view {
-  display: flex;
-  justify-content: center;
   align-items: center;
-  flex-flow: column nowrap;
-  min-height: 100%;
+  justify-content: center;
+  min-height: $sub-page-height;
 
   .btn {
     margin-top: 20rpx;
