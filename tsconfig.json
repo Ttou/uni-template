@@ -1,26 +1,11 @@
 {
-  "extends": "@vue/tsconfig/tsconfig.json",
-  "compilerOptions": {
-    "sourceMap": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["src/*"]
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
     },
-    "types": [
-      "@dcloudio/types",
-      "@ttou/uv-typings/shim",
-      "@ttou/uv-typings/v3",
-      "@uni-helper/uni-app-types",
-      "@mini-types/alipay",
-      "miniprogram-api-typings",
-      "vite/client"
-    ]
-  },
-  "include": ["src", "types"],
-  "exclude": ["node_modules"],
-  "vueCompilerOptions": {
-    "nativeTags": ["block", "component", "template", "slot"],
-    "target": 3
-  },
-  "references": [{ "path": "./tsconfig.node.json" }]
+    {
+      "path": "./tsconfig.app.json"
+    }
+  ]
 }

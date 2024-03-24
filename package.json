@@ -78,6 +78,7 @@
     "@dcloudio/uni-stacktracey": "3.0.0-3090920231225001",
     "@dcloudio/vite-plugin-uni": "3.0.0-3090920231225001",
     "@mini-types/alipay": "*",
+    "@tsconfig/node18": "^18.2.3",
     "@ttou/define-config": "^3.2.0",
     "@ttou/uv-typings": "^1.10.2",
     "@typescript-eslint/eslint-plugin": "^6.14.0",

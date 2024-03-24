@@ -1,0 +1,29 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.json",
+  "compilerOptions": {
+    "composite": true,
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "noUnusedLocals": false,
+    "sourceMap": true,
+
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "types": [
+      "@dcloudio/types",
+      "@ttou/uv-typings/shim",
+      "@ttou/uv-typings/v3",
+      "@uni-helper/uni-app-types",
+      "@mini-types/alipay",
+      "miniprogram-api-typings",
+      "vite/client"
+    ]
+  },
+  "include": ["src", "types"],
+  "exclude": ["node_modules"],
+  "vueCompilerOptions": {
+    "nativeTags": ["block", "component", "template", "slot"],
+    "target": 3
+  }
+}
