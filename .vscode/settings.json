@@ -6,6 +6,7 @@
   "path-intellisense.mappings": {
     "@": "${workspaceFolder}/src"
   },
+  "vue.server.hybridMode": false,
   "css.validate": false,
   "scss.validate": false,
   "cSpell.words": [
