@@ -83,10 +83,10 @@ export default defineComponent({
   .textWrap {
     align-items: center;
     margin-top: 50rpx;
+    text-align: center;
 
     .count {
       margin-top: 20rpx;
-      text-align: center;
     }
 
     .btn {
