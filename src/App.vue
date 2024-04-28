@@ -19,7 +19,3 @@ export default defineComponent({
   }
 })
 </script>
-
-<style lang="scss">
-@import '@climblee/uv-ui/index.scss';
-</style>

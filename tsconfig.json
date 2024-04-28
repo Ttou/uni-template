@@ -2,19 +2,17 @@
   "extends": "@vue/tsconfig/tsconfig.json",
   "compilerOptions": {
     "sourceMap": true,
-
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
     },
     "types": [
       "@dcloudio/types",
-      "@ttou/uv-typings/shim",
-      "@ttou/uv-typings/v3",
       "@uni-helper/uni-app-types",
       "@mini-types/alipay",
       "miniprogram-api-typings",
-      "vite/client"
+      "vite/client",
+      "wot-design-uni/global"
     ]
   },
   "include": ["src", "types"],

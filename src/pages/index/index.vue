@@ -1,32 +1,32 @@
 <template>
-  <view class="view">
+  <view class="view flexColumnCenter">
     <view class="logoWrap">
       <image class="logo" src="@/static/logo.png" />
     </view>
     <view class="textWrap">
       <Welcome :msg="title" />
-      <text class="count">{{ count }}</text>
+      <view class="count">{{ count }}</view>
       <view class="btn">
-        <uv-button type="primary" @click="handleCount">计数</uv-button>
+        <wd-button type="primary" @click="handleCount">计数</wd-button>
       </view>
       <view class="btn">
-        <uv-button type="primary" @click="handleOpen">弹窗</uv-button>
+        <wd-button type="primary" @click="handleOpen">弹窗</wd-button>
       </view>
       <view class="btn">
-        <uv-button type="primary" @click="handleJump">跳转</uv-button>
+        <wd-button type="primary" @click="handleJump">跳转</wd-button>
       </view>
     </view>
-    <uv-popup ref="popupRef" closeable :safeAreaInsetBottom="false">
+    <wd-popup v-model="dialogVisible" closable :safeAreaInsetBottom="false">
       <view class="dialog">
         <view class="content">
-          <uv-cell-group :border="false" customStyle="width: 100%">
-            <uv-cell title="设备类型" :value="info.deviceType"></uv-cell>
-            <uv-cell title="浏览器类型" :value="info.browserName"></uv-cell>
-            <uv-cell title="浏览器版本" :value="info.browserVersion"></uv-cell>
-          </uv-cell-group>
+          <wd-cell-group :border="false" customStyle="width: 100%">
+            <wd-cell title="设备类型" :value="info.deviceType"></wd-cell>
+            <wd-cell title="浏览器类型" :value="info.browserName"></wd-cell>
+            <wd-cell title="浏览器版本" :value="info.browserVersion"></wd-cell>
+          </wd-cell-group>
         </view>
       </view>
-    </uv-popup>
+    </wd-popup>
   </view>
 </template>
 
@@ -65,7 +65,6 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .view {
-  justify-content: center;
   min-height: $page-height;
 
   .logoWrap {
@@ -87,6 +86,7 @@ export default defineComponent({
 
     .count {
       margin-top: 20rpx;
+      text-align: center;
     }
 
     .btn {

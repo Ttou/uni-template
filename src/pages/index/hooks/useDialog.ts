@@ -1,16 +1,15 @@
-import type { PopupRef } from '@ttou/uv-typings/types/popup'
 import { reactive, toRefs } from 'vue'
 
 export function useDialog() {
   const state = reactive({
-    popupRef: {} as PopupRef,
+    dialogVisible: false,
     info: {} as UniApp.GetSystemInfoResult
   })
 
   function handleOpen() {
     uni.getSystemInfo().then(res => {
       state.info = res
-      state.popupRef.open()
+      state.dialogVisible = true
     })
   }
 

@@ -1,8 +1,8 @@
 <template>
-  <view class="view">
+  <view class="view flexColumnCenter">
     <text>内容</text>
     <view class="btn">
-      <uv-button type="primary" @click="handleBack">返回</uv-button>
+      <wd-button type="primary" @click="handleBack">返回</wd-button>
     </view>
   </view>
 </template>
@@ -25,8 +25,6 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .view {
-  align-items: center;
-  justify-content: center;
   min-height: $sub-page-height;
 
   .btn {
