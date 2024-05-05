@@ -38,6 +38,8 @@
     "build:quickapp-webview": "uni build -p quickapp-webview",
     "build:quickapp-webview-huawei": "uni build -p quickapp-webview-huawei",
     "build:quickapp-webview-union": "uni build -p quickapp-webview-union",
+    "lint:js": "eslint \"**/*.{ts,vue}\" --fix",
+    "lint:css": "stylelint \"**/*.{css,scss,vue}\" --fix",
     "check": "vue-tsc --noEmit",
     "commit": "git add . && git cz",
     "uvm": "npx @dcloudio/uvm",
