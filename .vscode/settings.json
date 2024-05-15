@@ -6,9 +6,10 @@
   "path-intellisense.mappings": {
     "@": "${workspaceFolder}/src"
   },
-  "vue.server.hybridMode": false,
   "css.validate": false,
+  "less.validate": false,
   "scss.validate": false,
+  "stylelint.enable": true,
   "cSpell.words": [
     "automator",
     "climblee",
