@@ -18,6 +18,7 @@
   "include": ["src", "types"],
   "exclude": ["node_modules"],
   "vueCompilerOptions": {
+    "plugins": ["@uni-helper/uni-app-types/volar-plugin"],
     "target": 3
   }
 }
