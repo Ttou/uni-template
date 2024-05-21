@@ -50,3 +50,5 @@ npm run build:mp-weixin
 - 长列表不要使用 scroll-view，[性能问题](https://uniapp.dcloud.net.cn/component/scroll-view.html#webviewtips)
 
 ## 待处理
+
+- [ ] 使用 uvm 会升级到 alpha [issue](https://github.com/dcloudio/uni-app/issues/4895)
