@@ -6,7 +6,7 @@
     <view class="textWrap">
       <Welcome :msg="title" />
       <view class="count">{{ count }}</view>
-      <view class="btn">
+      <view class="btnsWrap">
         <wd-button type="primary" size="small" @click="handleDecrement">
           -
         </wd-button>
@@ -95,6 +95,10 @@ export default defineComponent({
     }
 
     .btn {
+      margin-top: 20rpx;
+    }
+
+    .btnsWrap {
       margin-top: 20rpx;
 
       :deep(.wd-button + .wd-button) {

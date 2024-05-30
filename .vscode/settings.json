@@ -10,6 +10,7 @@
   "less.validate": false,
   "scss.validate": false,
   "stylelint.enable": true,
+  "vue.server.hybridMode": true,
   "cSpell.words": [
     "automator",
     "climblee",
