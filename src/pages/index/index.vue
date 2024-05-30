@@ -7,7 +7,12 @@
       <Welcome :msg="title" />
       <view class="count">{{ count }}</view>
       <view class="btn">
-        <wd-button type="primary" @click="handleCount">计数</wd-button>
+        <wd-button type="primary" size="small" @click="handleDecrement">
+          -
+        </wd-button>
+        <wd-button type="primary" size="small" @click="handleIncrement">
+          +
+        </wd-button>
       </view>
       <view class="btn">
         <wd-button type="primary" @click="handleOpen">弹窗</wd-button>
@@ -91,6 +96,10 @@ export default defineComponent({
 
     .btn {
       margin-top: 20rpx;
+
+      :deep(.wd-button + .wd-button) {
+        margin-left: 20rpx;
+      }
     }
   }
 
