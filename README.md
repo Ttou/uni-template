@@ -50,3 +50,6 @@ npm run build:mp-weixin
 - 长列表不要使用 scroll-view，[性能问题](https://uniapp.dcloud.net.cn/component/scroll-view.html#webviewtips)
 
 ## 待处理
+
+- [ ] 组件库类型丢失，[issue](https://github.com/Moonofweisheng/wot-design-uni/issues/420)
+- [ ] 组件类型报错，[issue](https://github.com/uni-helper/uni-types/issues/9)
