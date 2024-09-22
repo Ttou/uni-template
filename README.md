@@ -6,7 +6,7 @@ Uni Template 是一个开源的小程序模版。
 
 ## 特性
 
-- **技术栈**：使用 Vue3/UniApp/WotDesignUni 等前端前沿技术开发
+- **技术栈**：使用 Vue3/UniApp/NutUI 等前端前沿技术开发
 - **TypeScript**：应用程序级 JavaScript 的语言
 
 ## 准备
@@ -14,7 +14,7 @@ Uni Template 是一个开源的小程序模版。
 - [Node](http://nodejs.org/) 和 [Git](https://git-scm.com/)
 - [Vue3](https://v3.cn.vuejs.org/guide/introduction.html)
 - [UniApp](https://uniapp.dcloud.io/)
-- [Wot Design Uni](https://wot-design-uni.gitee.io/)
+- [NutUI](https://nutui-uniapp.netlify.app/)
 
 ## 安装使用
 
