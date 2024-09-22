@@ -7,7 +7,7 @@ export function usePersistedstatePlugin(pinia: Pinia) {
   pinia.use(PiniaPersistedstatePlugin)
 }
 
-export const uniStorage: StorageLike = {
+export const customStorage: StorageLike = {
   getItem(key) {
     return uni.getStorageSync(key)
   },
