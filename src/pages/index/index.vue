@@ -1,5 +1,5 @@
 <template>
-  <view class="view flexColumnCenter">
+  <view class="view">
     <view class="logoWrap">
       <image class="logo" src="@/static/logo.png" />
     </view>
@@ -7,31 +7,27 @@
       <Welcome :msg="title" />
       <view class="count">{{ count }}</view>
       <view class="btnsWrap">
-        <wd-button type="primary" size="small" @click="handleDecrement">
+        <nut-button type="primary" size="small" @click="handleDecrement">
           -
-        </wd-button>
-        <wd-button type="primary" size="small" @click="handleIncrement">
+        </nut-button>
+        <nut-button type="primary" size="small" @click="handleIncrement">
           +
-        </wd-button>
+        </nut-button>
       </view>
       <view class="btn">
-        <wd-button type="primary" @click="handleOpen">弹窗</wd-button>
+        <nut-button type="primary" @click="handleOpen">弹窗</nut-button>
       </view>
       <view class="btn">
-        <wd-button type="primary" @click="handleJump">跳转</wd-button>
+        <nut-button type="primary" @click="handleJump">跳转</nut-button>
       </view>
     </view>
-    <wd-popup v-model="dialogVisible" closable :safeAreaInsetBottom="false">
+    <nut-popup v-model:visible="show" closable>
       <view class="dialog">
         <view class="content">
-          <wd-cell-group :border="false" customStyle="width: 100%">
-            <wd-cell title="设备类型" :value="info.deviceType"></wd-cell>
-            <wd-cell title="浏览器类型" :value="info.browserName"></wd-cell>
-            <wd-cell title="浏览器版本" :value="info.browserVersion"></wd-cell>
-          </wd-cell-group>
+          <text>{{ title }}</text>
         </view>
       </view>
-    </wd-popup>
+    </nut-popup>
   </view>
 </template>
 
@@ -47,6 +43,10 @@ export default defineComponent({
     const countHook = useCount()
     const dialogHook = useDialog()
 
+    function handleJump() {
+      uni.navigateTo({ url: '/pages/other/index' })
+    }
+
     onLoad(options => {
       console.log('page load', options)
     })
@@ -56,13 +56,14 @@ export default defineComponent({
     })
 
     onHide(() => {
-      console.log('Page Hide')
+      console.log('page hide')
     })
 
     return {
       ...initHook,
       ...countHook,
-      ...dialogHook
+      ...dialogHook,
+      handleJump
     }
   }
 })
@@ -70,6 +71,10 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
   min-height: $page-height;
 
   .logoWrap {
@@ -101,7 +106,7 @@ export default defineComponent({
     .btnsWrap {
       margin-top: 20rpx;
 
-      :deep(.wd-button + .wd-button) {
+      :deep(.nut-button + .nut-button) {
         margin-left: 20rpx;
       }
     }
@@ -109,9 +114,15 @@ export default defineComponent({
 
   .dialog {
     width: 400rpx;
+    height: 200rpx;
 
     .content {
-      padding: 40rpx 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      font-size: 28rpx;
     }
   }
 }

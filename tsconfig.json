@@ -24,7 +24,7 @@
       "@mini-types/alipay",
       "miniprogram-api-typings",
       "vite/client",
-      "wot-design-uni/global"
+      "nutui-uniapp/global.d.ts"
     ]
   },
   "include": ["src", "types"],

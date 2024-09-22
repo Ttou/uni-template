@@ -53,3 +53,4 @@ npm run build:mp-weixin
 
 - [ ] 组件库类型丢失，[issue](https://github.com/Moonofweisheng/wot-design-uni/issues/420)
 - [ ] 组件类型报错，[issue](https://github.com/uni-helper/uni-types/issues/9)
+- [ ] sass 从 `1.79.1` 开始报警告，[issue](https://github.com/dcloudio/uni-app/issues/5152)

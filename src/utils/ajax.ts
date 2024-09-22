@@ -5,13 +5,13 @@ const ajax = un.create({
   timeout: 8000
 })
 
-ajax.interceptors.request.use(config => {
-  return config
+ajax.interceptors.request.use(req => {
+  return req
 })
 
 ajax.interceptors.response.use(
-  response => {
-    return response
+  res => {
+    return res
   },
   error => {
     return Promise.reject(error)

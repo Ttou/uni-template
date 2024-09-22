@@ -7,7 +7,7 @@ export function useInit() {
   })
 
   function init() {
-    uni.showLoading({ title: '加载中' })
+    uni.showLoading({ title: '加载中...' })
 
     setTimeout(() => {
       state.title = 'Hello UniApp'
@@ -15,18 +15,11 @@ export function useInit() {
     }, 1500)
   }
 
-  function handleJump() {
-    uni.navigateTo({
-      url: '/pages/other/index'
-    })
-  }
-
   onLoad(() => {
     init()
   })
 
   return {
-    ...toRefs(state),
-    handleJump
+    ...toRefs(state)
   }
 }
