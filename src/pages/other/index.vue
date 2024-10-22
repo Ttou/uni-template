@@ -1,6 +1,8 @@
 <template>
-  <view class="view flexColumnCenter">
-    <nut-button type="primary" @click="handleBack">返回</nut-button>
+  <view class="view">
+    <view class="btn">
+      <wd-button type="primary" @click="handleBack">返回</wd-button>
+    </view>
   </view>
 </template>
 
@@ -22,9 +24,10 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .view {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   min-height: $sub-page-height;
+
+  .btn {
+    text-align: center;
+  }
 }
 </style>

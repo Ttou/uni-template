@@ -12,6 +12,6 @@ export default defineComponent({
 })
 </script>
 
-<style lang="scss">
-@import 'nutui-uniapp/styles/index.scss';
+<style lang="css">
+@import './theme.css';
 </style>

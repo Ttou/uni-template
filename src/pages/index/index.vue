@@ -7,27 +7,27 @@
       <Welcome :msg="title" />
       <view class="count">{{ count }}</view>
       <view class="btnsWrap">
-        <nut-button type="primary" size="small" @click="handleDecrement">
+        <wd-button type="primary" size="small" @click="handleDecrement">
           -
-        </nut-button>
-        <nut-button type="primary" size="small" @click="handleIncrement">
+        </wd-button>
+        <wd-button type="primary" size="small" @click="handleIncrement">
           +
-        </nut-button>
+        </wd-button>
       </view>
       <view class="btn">
-        <nut-button type="primary" @click="handleOpen">弹窗</nut-button>
+        <wd-button type="primary" @click="handleOpen">弹窗</wd-button>
       </view>
       <view class="btn">
-        <nut-button type="primary" @click="handleJump">跳转</nut-button>
+        <wd-button type="primary" @click="handleJump">跳转</wd-button>
       </view>
     </view>
-    <nut-popup v-model:visible="show" closable>
+    <wd-popup v-model="show" closable :safeAreaInsetBottom="false">
       <view class="dialog">
         <view class="content">
           <text>{{ title }}</text>
         </view>
       </view>
-    </nut-popup>
+    </wd-popup>
   </view>
 </template>
 
@@ -56,7 +56,7 @@ export default defineComponent({
     })
 
     onHide(() => {
-      console.log('page hide')
+      console.log('Page Hide')
     })
 
     return {
@@ -71,10 +71,6 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .view {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column nowrap;
   min-height: $page-height;
 
   .logoWrap {
@@ -106,7 +102,7 @@ export default defineComponent({
     .btnsWrap {
       margin-top: 20rpx;
 
-      :deep(.nut-button + .nut-button) {
+      :deep(.wd-button + .wd-button) {
         margin-left: 20rpx;
       }
     }
@@ -114,15 +110,9 @@ export default defineComponent({
 
   .dialog {
     width: 400rpx;
-    height: 200rpx;
 
     .content {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-      width: 100%;
-      font-size: 28rpx;
+      padding: 40rpx 0;
     }
   }
 }

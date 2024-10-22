@@ -1,4 +1,5 @@
 {
+    "$schema": "https://cdn.jsdelivr.net/gh/uni-helper/uni-app-schemas-vscode/schemas/manifest.json",
     "name" : "uni-template",
     "appid" : "",
     "description" : "",

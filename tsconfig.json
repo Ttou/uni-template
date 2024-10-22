@@ -24,13 +24,14 @@
       "@mini-types/alipay",
       "miniprogram-api-typings",
       "vite/client",
-      "nutui-uniapp/global.d.ts"
+      "wot-design-uni/global"
     ]
   },
   "include": ["src", "types"],
   "exclude": ["node_modules"],
   "vueCompilerOptions": {
     "plugins": ["@uni-helper/uni-app-types/volar-plugin"],
+    "lib": "@vue/runtime-core",
     "target": 3
   }
 }

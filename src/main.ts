@@ -1,5 +1,3 @@
-import './theme.css'
-
 import * as Pinia from 'pinia'
 import { createSSRApp } from 'vue'
 
