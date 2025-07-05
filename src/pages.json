@@ -3,7 +3,7 @@
   "easycom": {
     "autoscan": true,
     "custom": {
-		  "^wd-(.*)": "wot-design-uni/components/wd-$1/wd-$1.vue"
+		  "^sar-(.*)": "sard-uniapp/components/$1/$1.vue"
 		}
   },
   "pages": [

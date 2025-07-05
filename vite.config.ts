@@ -16,8 +16,8 @@ export default defineConfig(({ mode }) => {
       ]
     },
     plugins: [uni()],
-    server: {
-      port: 8080
+    optimizeDeps: {
+      exclude: ['sard-uniapp']
     }
   }
 })

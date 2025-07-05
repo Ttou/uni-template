@@ -13,5 +13,5 @@ export default defineComponent({
 </script>
 
 <style lang="css">
-@import './theme.css';
+@import 'sard-uniapp/index.scss';
 </style>

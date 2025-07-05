@@ -2,15 +2,10 @@
   <text class="welcome">{{ msg }}</text>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
-
+<script lang="ts" setup>
 import { welcomeProps } from './Welcome.define'
 
-export default defineComponent({
-  name: 'Welcome',
-  props: welcomeProps()
-})
+defineProps(welcomeProps())
 </script>
 
 <style scoped>

@@ -1,8 +1,7 @@
-import { un } from '@uni-helper/uni-network'
+import { Request } from 'sard-uniapp'
 
-const ajax = un.create({
-  baseUrl: '/api',
-  timeout: 8000
+const ajax = new Request({
+  baseURL: 'http://localhost/api'
 })
 
 ajax.interceptors.request.use(req => {

@@ -6,7 +6,7 @@ Uni Template 是一个开源的小程序模版。
 
 ## 特性
 
-- **技术栈**：使用 Vue3/UniApp/WotDesign 等前端前沿技术开发
+- **技术栈**：使用 Vue3/UniApp/Sard 等前端前沿技术开发
 - **TypeScript**：应用程序级 JavaScript 的语言
 
 ## 准备
@@ -14,7 +14,7 @@ Uni Template 是一个开源的小程序模版。
 - [Node](http://nodejs.org/) 和 [Git](https://git-scm.com/)
 - [Vue3](https://v3.cn.vuejs.org/guide/introduction.html)
 - [UniApp](https://uniapp.dcloud.io/)
-- [WotDesign](https://wot-design-uni.cn/)
+- [Sard](https://sard.wzt.zone/sard-uniapp-docs/)
 
 ## 安装使用
 
@@ -51,6 +51,5 @@ npm run build:mp-weixin
 
 ## 待处理
 
-- [ ] 组件库类型丢失，[issue](https://github.com/Moonofweisheng/wot-design-uni/issues/420)
 - [ ] 组件类型报错，[issue](https://github.com/uni-helper/uni-types/issues/9)
 - [ ] sass 从 `1.79.1` 开始报警告，[issue](https://github.com/dcloudio/uni-app/issues/5152)
