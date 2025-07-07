@@ -12,6 +12,6 @@ export default defineComponent({
 })
 </script>
 
-<style lang="css">
+<style lang="scss">
 @import 'sard-uniapp/index.scss';
 </style>

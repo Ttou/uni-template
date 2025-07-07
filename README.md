@@ -51,6 +51,5 @@ npm run build:mp-weixin
 
 ## 待处理
 
-- [ ] Sard 在微信开发者工具预览失败，[issue](https://github.com/sutras/sard-uniapp/issues/175)
 - [ ] 组件类型报错，[issue](https://github.com/uni-helper/uni-types/issues/9)
 - [ ] sass 从 `1.79.1` 开始报警告，[issue](https://github.com/dcloudio/uni-app/issues/5152)

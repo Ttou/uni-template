@@ -37,7 +37,8 @@ onHide(() => {
   }
 
   .btn {
-    margin-top: 20rpx;
+    width: 200rpx;
+    margin: 20rpx auto 0;
   }
 }
 </style>
